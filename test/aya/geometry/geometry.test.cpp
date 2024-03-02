@@ -1,11 +1,9 @@
+import aya;
+
 #include "gtest/gtest.h"
-
-#include <aya_lib/geometry/geometry.hpp>
-
 #include <type_traits>
 
 using namespace aya::geometry;
-
 using point = point2d<int>;
 
 TEST(point2d, default_initialize) {

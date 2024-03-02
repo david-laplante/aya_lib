@@ -9,18 +9,28 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "aya_lib_tests", "aya_lib_te
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		debug|x64 = debug|x64
-		release|x64 = release|x64
+		debug-dll|x64 = debug-dll|x64
+		debug-lib|x64 = debug-lib|x64
+		release-dll|x64 = release-dll|x64
+		release-lib|x64 = release-lib|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{03060E72-CD42-4795-8751-1BD71C01EA5E}.debug|x64.ActiveCfg = debug|x64
-		{03060E72-CD42-4795-8751-1BD71C01EA5E}.debug|x64.Build.0 = debug|x64
-		{03060E72-CD42-4795-8751-1BD71C01EA5E}.release|x64.ActiveCfg = release|x64
-		{03060E72-CD42-4795-8751-1BD71C01EA5E}.release|x64.Build.0 = release|x64
-		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.debug|x64.ActiveCfg = debug|x64
-		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.debug|x64.Build.0 = debug|x64
-		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.release|x64.ActiveCfg = release|x64
-		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.release|x64.Build.0 = release|x64
+		{03060E72-CD42-4795-8751-1BD71C01EA5E}.debug-dll|x64.ActiveCfg = debug-dll|x64
+		{03060E72-CD42-4795-8751-1BD71C01EA5E}.debug-dll|x64.Build.0 = debug-dll|x64
+		{03060E72-CD42-4795-8751-1BD71C01EA5E}.debug-lib|x64.ActiveCfg = debug|x64
+		{03060E72-CD42-4795-8751-1BD71C01EA5E}.debug-lib|x64.Build.0 = debug|x64
+		{03060E72-CD42-4795-8751-1BD71C01EA5E}.release-dll|x64.ActiveCfg = release-dll|x64
+		{03060E72-CD42-4795-8751-1BD71C01EA5E}.release-dll|x64.Build.0 = release-dll|x64
+		{03060E72-CD42-4795-8751-1BD71C01EA5E}.release-lib|x64.ActiveCfg = release|x64
+		{03060E72-CD42-4795-8751-1BD71C01EA5E}.release-lib|x64.Build.0 = release|x64
+		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.debug-dll|x64.ActiveCfg = debug-dll|x64
+		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.debug-dll|x64.Build.0 = debug-dll|x64
+		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.debug-lib|x64.ActiveCfg = debug|x64
+		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.debug-lib|x64.Build.0 = debug|x64
+		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.release-dll|x64.ActiveCfg = release-dll|x64
+		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.release-dll|x64.Build.0 = release-dll|x64
+		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.release-lib|x64.ActiveCfg = release|x64
+		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.release-lib|x64.Build.0 = release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

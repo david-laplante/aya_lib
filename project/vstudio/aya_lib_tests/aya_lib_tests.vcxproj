@@ -1,8 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="debug-dll|x64">
+      <Configuration>debug-dll</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="debug|x64">
       <Configuration>debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="release-dll|x64">
+      <Configuration>release-dll</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="release|x64">
@@ -29,7 +37,17 @@
     <IntDir>$(SolutionDir)..\..\build\aya_lib_tests\$(Configuration)\intermediate\</IntDir>
     <IncludePath>$(SolutionDir)..\..\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug-dll|x64'">
+    <OutDir>$(SolutionDir)..\..\build\aya_lib_tests\$(Configuration)\output\</OutDir>
+    <IntDir>$(SolutionDir)..\..\build\aya_lib_tests\$(Configuration)\intermediate\</IntDir>
+    <IncludePath>$(SolutionDir)..\..\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|x64'">
+    <OutDir>$(SolutionDir)..\..\build\aya_lib_tests\$(Configuration)\output\</OutDir>
+    <IntDir>$(SolutionDir)..\..\build\aya_lib_tests\$(Configuration)\intermediate\</IntDir>
+    <IncludePath>$(SolutionDir)..\..\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release-dll|x64'">
     <OutDir>$(SolutionDir)..\..\build\aya_lib_tests\$(Configuration)\output\</OutDir>
     <IntDir>$(SolutionDir)..\..\build\aya_lib_tests\$(Configuration)\intermediate\</IntDir>
     <IncludePath>$(SolutionDir)..\..\include;$(IncludePath)</IncludePath>
@@ -50,6 +68,38 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
     </Link>
+    <PreBuildEvent>
+      <Command>robocopy $(TargetDir)..\..\..\aya_lib\$(configuration)\output $(TargetDir) aya_lib.lib /is /njh /njs /np
+exit 0
+</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Copy aya_lib dll and lib</Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug-dll|x64'">
+    <ClCompile>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>X64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);AYA_LIB_DLL</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PreBuildEvent>
+      <Command>robocopy $(TargetDir)..\..\..\aya_lib\$(configuration)\output $(TargetDir) aya_lib.lib aya_lib.dll /is /njh /njs /np
+exit 0
+</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Copy aya_lib dll and lib</Message>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release|x64'">
     <ClCompile>
@@ -67,18 +117,54 @@
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
     </Link>
+    <PreBuildEvent>
+      <Command>robocopy $(TargetDir)..\..\..\aya_lib\$(configuration)\output $(TargetDir) aya_lib.lib /is /njh /njs /np
+exit 0
+</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Copy aya_lib dll and lib</Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release-dll|x64'">
+    <ClCompile>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PreprocessorDefinitions>X64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);AYA_LIB_DLL</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+    <PreBuildEvent>
+      <Command>robocopy $(TargetDir)..\..\..\aya_lib\$(configuration)\output $(TargetDir) aya_lib.lib aya_lib.dll /is /njh /njs /np
+exit 0
+</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Copy aya_lib dll and lib</Message>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\test\aya_lib\geometry\geometry.test.cpp" />
-    <ClCompile Include="test.cpp" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\module\aya.cppm" />
+    <ClCompile Include="..\..\..\module\aya.geometry.cppm" />
+    <ClCompile Include="..\..\..\module\aya.window.cppm" />
+    <ClCompile Include="..\..\..\test\aya\display\window.test.cpp" />
+    <ClCompile Include="..\..\..\test\aya\geometry\geometry.test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\aya_lib\aya_lib.vcxproj">
       <Project>{03060e72-cd42-4795-8751-1bd71c01ea5e}</Project>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

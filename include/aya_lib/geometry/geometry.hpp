@@ -1,13 +1,13 @@
 #pragma once
 #include "../concept.hpp"
 
-namespace aya::geometry {
+namespace aya_lib::geometry {
 	template<concepts::arithmetic T>
 	struct point2d {
 		T x{};
 		T y{};
 
-		constexpr point2d() = default;
+		constexpr point2d() noexcept = default;
 		constexpr point2d(T const x, T const y) noexcept : x{x}, y{y} {}
 
 		constexpr point2d& operator+=(point2d const rhs) noexcept { x += rhs.x; y += rhs.y; return *this; }
