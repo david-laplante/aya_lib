@@ -1,5 +1,5 @@
 module;
-#include "../include/aya_lib/geometry/geometry.hpp"
+#include <aya_lib/geometry/geometry.hpp>
 
 export module aya:geometry;
 

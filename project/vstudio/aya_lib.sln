@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "aya_lib", "aya_lib\aya_lib.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "aya_lib_tests", "aya_lib_tests\aya_lib_tests.vcxproj", "{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "aya_lib_examples", "aya_lib_examples\aya_lib_examples.vcxproj", "{ABE68ED7-05E9-44B7-80D6-A9FDADA4DD39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		debug-dll|x64 = debug-dll|x64
@@ -17,20 +19,28 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{03060E72-CD42-4795-8751-1BD71C01EA5E}.debug-dll|x64.ActiveCfg = debug-dll|x64
 		{03060E72-CD42-4795-8751-1BD71C01EA5E}.debug-dll|x64.Build.0 = debug-dll|x64
-		{03060E72-CD42-4795-8751-1BD71C01EA5E}.debug-lib|x64.ActiveCfg = debug|x64
-		{03060E72-CD42-4795-8751-1BD71C01EA5E}.debug-lib|x64.Build.0 = debug|x64
+		{03060E72-CD42-4795-8751-1BD71C01EA5E}.debug-lib|x64.ActiveCfg = debug-lib|x64
+		{03060E72-CD42-4795-8751-1BD71C01EA5E}.debug-lib|x64.Build.0 = debug-lib|x64
 		{03060E72-CD42-4795-8751-1BD71C01EA5E}.release-dll|x64.ActiveCfg = release-dll|x64
 		{03060E72-CD42-4795-8751-1BD71C01EA5E}.release-dll|x64.Build.0 = release-dll|x64
-		{03060E72-CD42-4795-8751-1BD71C01EA5E}.release-lib|x64.ActiveCfg = release|x64
-		{03060E72-CD42-4795-8751-1BD71C01EA5E}.release-lib|x64.Build.0 = release|x64
+		{03060E72-CD42-4795-8751-1BD71C01EA5E}.release-lib|x64.ActiveCfg = release-lib|x64
+		{03060E72-CD42-4795-8751-1BD71C01EA5E}.release-lib|x64.Build.0 = release-lib|x64
 		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.debug-dll|x64.ActiveCfg = debug-dll|x64
 		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.debug-dll|x64.Build.0 = debug-dll|x64
-		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.debug-lib|x64.ActiveCfg = debug|x64
-		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.debug-lib|x64.Build.0 = debug|x64
+		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.debug-lib|x64.ActiveCfg = debug-lib|x64
+		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.debug-lib|x64.Build.0 = debug-lib|x64
 		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.release-dll|x64.ActiveCfg = release-dll|x64
 		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.release-dll|x64.Build.0 = release-dll|x64
-		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.release-lib|x64.ActiveCfg = release|x64
-		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.release-lib|x64.Build.0 = release|x64
+		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.release-lib|x64.ActiveCfg = release-lib|x64
+		{C1AC78BE-5F38-4A3E-807B-7EF41A1031DE}.release-lib|x64.Build.0 = release-lib|x64
+		{ABE68ED7-05E9-44B7-80D6-A9FDADA4DD39}.debug-dll|x64.ActiveCfg = debug-dll|x64
+		{ABE68ED7-05E9-44B7-80D6-A9FDADA4DD39}.debug-dll|x64.Build.0 = debug-dll|x64
+		{ABE68ED7-05E9-44B7-80D6-A9FDADA4DD39}.debug-lib|x64.ActiveCfg = debug-lib|x64
+		{ABE68ED7-05E9-44B7-80D6-A9FDADA4DD39}.debug-lib|x64.Build.0 = debug-lib|x64
+		{ABE68ED7-05E9-44B7-80D6-A9FDADA4DD39}.release-dll|x64.ActiveCfg = release-dll|x64
+		{ABE68ED7-05E9-44B7-80D6-A9FDADA4DD39}.release-dll|x64.Build.0 = release-dll|x64
+		{ABE68ED7-05E9-44B7-80D6-A9FDADA4DD39}.release-lib|x64.ActiveCfg = release-lib|x64
+		{ABE68ED7-05E9-44B7-80D6-A9FDADA4DD39}.release-lib|x64.Build.0 = release-lib|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

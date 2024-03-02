@@ -1,5 +1,5 @@
 #pragma once
-#include "window.hpp"
+#include <aya_lib/display/window.hpp>
 
 namespace aya_lib::display {
 	window::window() noexcept {

@@ -1,5 +1,5 @@
 #pragma once
-#include "../aya_lib.hpp"
+#include <aya_lib/aya_lib.hpp>
 
 namespace aya_lib::display {
 	class window {

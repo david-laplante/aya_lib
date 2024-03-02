@@ -1,5 +1,5 @@
 #pragma once
-#include "../concept.hpp"
+#include <aya_lib/concept.hpp>
 
 namespace aya_lib::geometry {
 	template<concepts::arithmetic T>

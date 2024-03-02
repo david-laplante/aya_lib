@@ -1,5 +1,5 @@
 module;
-#include "../include/aya_lib/display/window.hpp"
+#include <aya_lib/display/window.hpp>
 
 export module aya:display;
 

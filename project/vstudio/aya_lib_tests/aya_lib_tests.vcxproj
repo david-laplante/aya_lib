@@ -5,16 +5,16 @@
       <Configuration>debug-dll</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="debug|x64">
-      <Configuration>debug</Configuration>
+    <ProjectConfiguration Include="debug-lib|x64">
+      <Configuration>debug-lib</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="release-dll|x64">
       <Configuration>release-dll</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="release|x64">
-      <Configuration>release</Configuration>
+    <ProjectConfiguration Include="release-lib|x64">
+      <Configuration>release-lib</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
@@ -32,28 +32,28 @@
   <ImportGroup Label="Shared" />
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug|x64'">
-    <OutDir>$(SolutionDir)..\..\build\aya_lib_tests\$(Configuration)\output\</OutDir>
-    <IntDir>$(SolutionDir)..\..\build\aya_lib_tests\$(Configuration)\intermediate\</IntDir>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug-lib|x64'">
+    <OutDir>$(SolutionDir)..\..\build\$(ProjectName)\$(Configuration)\output\</OutDir>
+    <IntDir>$(SolutionDir)..\..\build\$(ProjectName)\$(Configuration)\intermediate\</IntDir>
     <IncludePath>$(SolutionDir)..\..\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug-dll|x64'">
-    <OutDir>$(SolutionDir)..\..\build\aya_lib_tests\$(Configuration)\output\</OutDir>
-    <IntDir>$(SolutionDir)..\..\build\aya_lib_tests\$(Configuration)\intermediate\</IntDir>
+    <OutDir>$(SolutionDir)..\..\build\$(ProjectName)\$(Configuration)\output\</OutDir>
+    <IntDir>$(SolutionDir)..\..\build\$(ProjectName)\$(Configuration)\intermediate\</IntDir>
     <IncludePath>$(SolutionDir)..\..\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|x64'">
-    <OutDir>$(SolutionDir)..\..\build\aya_lib_tests\$(Configuration)\output\</OutDir>
-    <IntDir>$(SolutionDir)..\..\build\aya_lib_tests\$(Configuration)\intermediate\</IntDir>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release-lib|x64'">
+    <OutDir>$(SolutionDir)..\..\build\$(ProjectName)\$(Configuration)\output\</OutDir>
+    <IntDir>$(SolutionDir)..\..\build\$(ProjectName)\$(Configuration)\intermediate\</IntDir>
     <IncludePath>$(SolutionDir)..\..\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release-dll|x64'">
-    <OutDir>$(SolutionDir)..\..\build\aya_lib_tests\$(Configuration)\output\</OutDir>
-    <IntDir>$(SolutionDir)..\..\build\aya_lib_tests\$(Configuration)\intermediate\</IntDir>
+    <OutDir>$(SolutionDir)..\..\build\$(ProjectName)\$(Configuration)\output\</OutDir>
+    <IntDir>$(SolutionDir)..\..\build\$(ProjectName)\$(Configuration)\intermediate\</IntDir>
     <IncludePath>$(SolutionDir)..\..\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup />
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug-lib|x64'">
     <ClCompile>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
@@ -69,7 +69,7 @@
       <SubSystem>Console</SubSystem>
     </Link>
     <PreBuildEvent>
-      <Command>robocopy $(TargetDir)..\..\..\aya_lib\$(configuration)\output $(TargetDir) aya_lib.lib /is /njh /njs /np
+      <Command>robocopy $(TargetDir)..\..\..\aya_lib\$(Configuration)\output $(TargetDir) aya_lib.lib /is /njh /njs /np
 exit 0
 </Command>
     </PreBuildEvent>
@@ -93,7 +93,7 @@ exit 0
       <SubSystem>Console</SubSystem>
     </Link>
     <PreBuildEvent>
-      <Command>robocopy $(TargetDir)..\..\..\aya_lib\$(configuration)\output $(TargetDir) aya_lib.lib aya_lib.dll /is /njh /njs /np
+      <Command>robocopy $(TargetDir)..\..\..\aya_lib\$(Configuration)\output $(TargetDir) aya_lib.lib aya_lib.dll /is /njh /njs /np
 exit 0
 </Command>
     </PreBuildEvent>
@@ -101,7 +101,7 @@ exit 0
       <Message>Copy aya_lib dll and lib</Message>
     </PreBuildEvent>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release-lib|x64'">
     <ClCompile>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
@@ -118,7 +118,7 @@ exit 0
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
     </Link>
     <PreBuildEvent>
-      <Command>robocopy $(TargetDir)..\..\..\aya_lib\$(configuration)\output $(TargetDir) aya_lib.lib /is /njh /njs /np
+      <Command>robocopy $(TargetDir)..\..\..\aya_lib\$(Configuration)\output $(TargetDir) aya_lib.lib /is /njh /njs /np
 exit 0
 </Command>
     </PreBuildEvent>
@@ -143,7 +143,7 @@ exit 0
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
     </Link>
     <PreBuildEvent>
-      <Command>robocopy $(TargetDir)..\..\..\aya_lib\$(configuration)\output $(TargetDir) aya_lib.lib aya_lib.dll /is /njh /njs /np
+      <Command>robocopy $(TargetDir)..\..\..\aya_lib\$(Configuration)\output $(TargetDir) aya_lib.lib aya_lib.dll /is /njh /njs /np
 exit 0
 </Command>
     </PreBuildEvent>

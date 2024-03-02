@@ -4,34 +4,31 @@
     <Filter Include="include">
       <UniqueIdentifier>{48870e01-398d-4920-9c41-56f5346ebf26}</UniqueIdentifier>
     </Filter>
-    <Filter Include="source">
-      <UniqueIdentifier>{ca8fa7f4-1730-4ecc-a564-20aa5a95664d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="module">
       <UniqueIdentifier>{4ab0c7b5-77cf-4166-bd00-d6ad99c913bf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="include\aya_lib">
+    <Filter Include="aya_lib">
       <UniqueIdentifier>{90b26eeb-dbbc-4dbc-857c-f6e173f25348}</UniqueIdentifier>
     </Filter>
-    <Filter Include="include\aya_lib\geometry">
-      <UniqueIdentifier>{3165c83b-b44d-443d-8619-340e0b7e70a7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="include\aya_lib\display">
+    <Filter Include="aya_lib\display">
       <UniqueIdentifier>{aa1ba37b-bf00-410e-8651-0e7dbd131c79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="aya_lib\geometry">
+      <UniqueIdentifier>{3165c83b-b44d-443d-8619-340e0b7e70a7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\aya_lib\geometry\geometry.hpp">
-      <Filter>include\aya_lib\geometry</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\aya_lib\concept.hpp">
-      <Filter>include\aya_lib</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\aya_lib\aya_lib.hpp">
-      <Filter>include\aya_lib</Filter>
+      <Filter>aya_lib\geometry</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\include\aya_lib\display\window.hpp">
-      <Filter>include\aya_lib\display</Filter>
+      <Filter>aya_lib\display</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\aya_lib\concept.hpp">
+      <Filter>aya_lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\aya_lib\aya_lib.hpp">
+      <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -46,11 +43,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\source\aya.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\include\aya_lib\display\window.cpp">
-      <Filter>include\aya_lib\display</Filter>
+    <ClCompile Include="..\..\..\source\aya_lib\display\window.cpp">
+      <Filter>aya_lib\display</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
